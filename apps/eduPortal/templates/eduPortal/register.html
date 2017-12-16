@@ -1,1 +1,46 @@
-Register Page
+
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Register Page</title>
+    </head>
+    <body>
+        {% if messages %}
+        <div class="messages">
+            {% for message in messages %}
+            <p>{{ message }}</p>
+            {% endfor %}
+        </div>
+        {% endif %}
+        <div>
+            <h1>Role</h1>
+            <input type="radio"
+                name="role" value="student">
+            <label>Student</label>
+        
+            <input type="radio"
+                name="role" value="teacher">
+            <label>Teacher</label>
+        </div>
+        <div>
+            <h1>Topics</h1>
+            <input type="checkbox" name="math" value="math">
+            <label>Math</label>
+            <input type="checkbox" name="physics" value="physics">
+            <label>Physics</label>
+            <input type="checkbox" name="biology" value="biology">
+            <label>Biology</label>
+            <input type="checkbox" name="chemistry" value="chemistry">
+            <label>Chemistry</label>
+            <input type="checkbox" name="english" value="english">
+            <label>English</label>
+        </div>
+        <div>
+            <h1>Time</h1>
+            <p><label></label><input type="date" name="startdate"></p>
+        </div>
+    </body>
+    </html>
