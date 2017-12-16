@@ -1,3 +1,11 @@
+* {
+    font-family: 'Raleway', sans-serif;
+}
+body {
+    background-image: url('../img/Education.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 h1 {
     text-align: center;
     margin: 50px;
@@ -11,6 +19,9 @@ h1 {
     display: inline-block;
     vertical-align: top;
     margin: 20px;
-    height: 200px;
+    height: 300px;
     width: 300px;
+}
+input {
+    margin: 5px;
 }
