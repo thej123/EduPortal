@@ -16,7 +16,7 @@ def loginSubmit(request):
         print 'login success', result
         request.session['id'] = result.id
         messages.success(request, 'You have logged in!')
-        return redirect('/eduPortal/dashboard')
+        return redirect('/eduPortal/dashboardTwo')
 
 def registerSubmit(request):
     if request.method == "POST":
@@ -33,6 +33,9 @@ def registerSubmit(request):
 
 def dashboard(request):
     return render(request, "eduPortal/dashboard.html")
+
+def dashboardTwo(request):
+    return render(request, "eduPortal/dashboard2.html")
 
 def register(request):
     return render(request, "eduPortal/register.html")
