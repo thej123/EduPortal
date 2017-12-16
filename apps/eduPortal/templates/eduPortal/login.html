@@ -17,8 +17,8 @@
             <legend>Login</legend>
             <form action="eduPortal/login" method="post">
                 {% csrf_token %}
-                Email: <input type="text" name="user_email" value=""><br>
-                password: <input type="password" name="pass" value=""><br>
+                Email: <input type="text" name="email" value=""><br>
+                password: <input type="password" name="password" value=""><br>
                 <input type="submit" value="Login">
             </form>
         </fieldset>
@@ -27,12 +27,12 @@
         <legend>Register With Us</legend>
             <form action="eduPortal/register" method="post">
                 {% csrf_token %}
-                Name: <input type="text" name="f_name" value=""><br>
-                Email: <input type="text" name="user_email" value=""><br>
-                Password: <input type="password" name="pass" value=""><br>
-                <p>*Password should be at least 8 characters</p>
+                Name: <input type="text" name="name" value=""><br>
+                Email: <input type="text" name="email" value=""><br>
+                Password: <input type="password" name="password" value=""><br>
+                <p>*Password should be at least 5 characters</p>
                 Confirm PW: <input type="password" name="confirm_password" value=""><br>
-                <select name="" id="">
+                <select name="role" id="">
                     <option value="none">Select One</option>
                     <option value="student">Student</option>
                     <option value="teacher">Teacher</option>
