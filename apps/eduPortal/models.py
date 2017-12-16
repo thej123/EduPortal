@@ -11,7 +11,7 @@ class UserManager(models.Manager):
     def validate_registration(self, postData):
         errors = []
         if len(postData['name']) < 3:
-            errors.append('Name and Username cannot be fewer than 3 characters')
+            errors.append('Name cannot be fewer than 3 characters')
         email = self.filter(email=postData['email'])
         if len(email):
             errors.append("email already used")
@@ -27,6 +27,7 @@ class UserManager(models.Manager):
                 name=postData['name'],
                 email=postData['email'],
                 password=hashing,
+                role=postData['role'],
             )
             return user
         return errors
