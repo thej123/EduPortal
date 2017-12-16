@@ -35,9 +35,9 @@ class UserManager(models.Manager):
     def validate_login(self, postData):
         errors = []
         email = self.filter(email=postData['email'])
-        if len(user):
-            if bcrypt.checkpw(postData['password'].encode(),user[0].password.encode()):
-                return user[0]
+        if len(email):
+            if bcrypt.checkpw(postData['password'].encode(),email[0].password.encode()):
+                return email[0]
             else:
                 errors.append("Incorrect Password")
                 return errors
@@ -49,7 +49,7 @@ class User(models.Model):
     name = models.CharField(max_length=255)
     email = models.CharField(max_length=255)
     password = models.CharField(max_length=255)
-    accountType = models.CharField(max_length=255)
+    role = models.CharField(max_length=255)
     level = models.CharField(max_length=255)
     topics = [models.CharField(max_length=255)]
     time = {

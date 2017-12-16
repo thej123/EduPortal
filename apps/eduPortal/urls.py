@@ -3,10 +3,11 @@ from . import views
 
 urlpatterns = [
     url(r'^$', views.index),
-    url(r'^login$', views.login),
-    url(r'^register', views.register),
+    url(r'^login$', views.loginSubmit),
+    url(r'^register$', views.registerSubmit),
+    url(r'^registerPage', views.register),
     url(r'^dashboard', views.dashboard),
-    url(r'^registerSubmit', views.registerSubmit),
+    url(r'^registerSubmit', views.registerSubmitTwo),
     url(r'^connect', views.connect),
     url(r'^findPartner', views.findPartner),
 ]
