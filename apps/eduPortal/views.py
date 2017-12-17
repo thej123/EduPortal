@@ -35,15 +35,19 @@ def dashboard(request):
     return render(request, "eduPortal/dashboard.html")
 
 def dashboardTwo(request):
-    return render(request, "eduPortal/dashboard2.html")
+    context = {
+        "results": User.objects.all()
+        }
+    print "inside server, dashbaord two", context['results']
+    return render(request, "eduPortal/dashboard2.html", context)
 
 def register(request):
     return render(request, "eduPortal/register.html")
 
 # this request takes user from register page to dashboard page once all the info is given
-def registerSubmitTwo(request):
-
-    return redirect('eduPortal/dashboard')
+def registerSubmitInRegisterPage(request):
+    print request.POST
+    return redirect('/eduPortal/registerPage')
 
 # this request takes user from dashboard to hangouts page
 def connect(request):

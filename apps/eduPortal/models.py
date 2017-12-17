@@ -45,6 +45,12 @@ class UserManager(models.Manager):
             errors.append("Incorrect Email")
             return errors
 
+    def getUser(self):
+        print "inside database, before call, dashboard two"
+        users = self.filter()
+        print "inside database, dashboard two", users
+        return users
+
 class User(models.Model):
     name = models.CharField(max_length=255)
     email = models.CharField(max_length=255)

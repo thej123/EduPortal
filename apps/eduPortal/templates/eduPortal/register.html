@@ -17,17 +17,8 @@
                 {% endfor %}
             </div>
             {% endif %}
-            <form action="" method="POST">
+            <form action="/eduPortal/registerSubmit" method="POST">
             {% csrf_token %}
-            <div>
-                <h1>Role</h1>
-                <input type="radio"
-                    name="role" value="student">
-                <label>Student</label>
-                <input type="radio"
-                    name="role" value="teacher">
-                <label>Teacher</label>
-            </div>
             <div>
                 <h1>Topics</h1>
                 <input type="checkbox" name="math" value="math">

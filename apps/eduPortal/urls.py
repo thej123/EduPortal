@@ -8,7 +8,7 @@ urlpatterns = [
     url(r'^registerPage', views.register),
     url(r'^dashboard$', views.dashboard),
     url(r'^dashboardTwo', views.dashboardTwo),
-    url(r'^registerSubmit', views.registerSubmitTwo),
+    url(r'^registerSubmit', views.registerSubmitInRegisterPage),
     url(r'^connect', views.connect),
     url(r'^findPartner', views.findPartner),
 ]
