@@ -59,13 +59,13 @@ class User(models.Model):
     level = models.CharField(max_length=255)
     topics = [models.CharField(max_length=255)]
     time = {
-        "sunday" : [[models.CharField(max_length=255), models.CharField(max_length=255)]],
-        "monday" : [[models.CharField(max_length=255), models.CharField(max_length=255)]],
-        "tuesday" : [[models.CharField(max_length=255), models.CharField(max_length=255)]],
-        "wednesday" : [[models.CharField(max_length=255), models.CharField(max_length=255)]],
-        "thursday" : [[models.CharField(max_length=255), models.CharField(max_length=255)]],
-        "friday" : [[models.CharField(max_length=255), models.CharField(max_length=255)]],
-        "saturday" : [[models.CharField(max_length=255), models.CharField(max_length=255)]]
+        "sunday" : [],
+        "monday" : [],
+        "tuesday" : [],
+        "wednesday" : [],
+        "thursday" : [],
+        "friday" : [],
+        "saturday" : []
     }
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)

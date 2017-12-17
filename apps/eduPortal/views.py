@@ -17,6 +17,7 @@ def loginSubmit(request):
         print 'login success', type(result.topics)
         request.session['id'] = result.id
         request.session['name'] = result.name
+        request.session['role'] = result.role
         messages.success(request, 'You have logged in!')
         if not result.level:
             return redirect('/eduPortal/registerPage')
@@ -33,6 +34,7 @@ def registerSubmit(request):
         else:
             request.session['id'] = result.id
             request.session['name'] = request.POST['name']
+            request.session['role'] = request.POST['role']
             messages.success(request, 'You have registered successfully!')
             return redirect('/eduPortal/registerPage')
 
@@ -40,24 +42,48 @@ def logout(request):
     return redirect("/")
 
 def dashboard(request):
+    topics = User.objects.get(id=request.session['id']).topics
+    print "got topics?", topics
     return render(request, "eduPortal/dashboard.html")
 
 def dashboardTwo(request):
     context = {
-        "results": User.objects.all()
+        "students": User.objects.filter(role = "students"),
+        "teachers": User.objects.filter(role = "teacher")
         }
-    print "inside server, dashbaord two", context['results']
+    user = User.objects.get(id=request.session['id'])
+    print "inside server, dashbaord two, time", user.time
+    print "inside server, dashbaord two, topics", user.topics
     return render(request, "eduPortal/dashboard2.html", context)
 
 def register(request):
     print request.session['id'], request.session['name']
+    user = User.objects.get(id=request.session['id'])
+    print "inside server, register, time", user.time
+    print "inside server, register, topics", user.topics
     return render(request, "eduPortal/register.html")
 
 # this request takes user from register page to dashboard page once all the info is given
 def registerSubmitInRegisterPage(request):
+    
     print request.POST
-    User.objects.get(id=session['id']).topics.add(request.POST['topics'])
-    return redirect('/eduPortal/registerPage')
+    if "subject" in request.POST:
+        User.objects.get(id=request.session['id']).topics.append(request.POST['subject'])
+    if "saturdayTime" in request.POST:
+        User.objects.get(id=request.session['id']).time['saturday'].append(request.POST['saturdayTime'])
+    if "sundayTime" in request.POST:    
+        User.objects.get(id=request.session['id']).time['sunday'].append(request.POST['sundayTime'])
+    if "mondayTime" in request.POST:  
+        User.objects.get(id=request.session['id']).time['monday'].append(request.POST['mondayTime'])
+    if "tuesdayTime" in request.POST:  
+        User.objects.get(id=request.session['id']).time['tuesday'].append(request.POST['tuesdayTime'])
+    if "wednesdayTime" in request.POST:  
+        User.objects.get(id=request.session['id']).time['wednesday'].append(request.POST['wednesdayTime'])
+    if "thursdayTime" in request.POST:  
+        User.objects.get(id=request.session['id']).time['thursday'].append(request.POST['thursdayTime'])
+    if "fridayTime" in request.POST:  
+        User.objects.get(id=request.session['id']).time['friday'].append(request.POST['fridayTime'])
+    return redirect('/eduPortal/dashboardTwo')
 
 # this request takes user from dashboard to hangouts page
 def connect(request):
