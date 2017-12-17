@@ -1,0 +1,45 @@
+* {
+    font-family: 'Raleway', sans-serif;
+}
+
+body {
+    background: url('../img/classroom.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+nav {
+    background-color: #e9ecef;
+    padding: 10px;
+}
+
+h2{
+    display: inline-block;
+}
+
+.page-urls {
+    display: inline-block;
+    margin-left: 70%;
+}
+
+ a {
+    margin-left: 10px;
+} 
+
+.table {
+    /* width: 600px; */
+    border: 1px solid #e9ecef;
+}
+
+.wrapper {
+    background-color: #fff;
+    margin: 20px auto;
+    padding: 25px;
+    width: 60%;
+    border-radius: 25px;
+    -webkit-box-shadow: 0px 3px 106px -12px rgba(8,8,8,1);
+    -moz-box-shadow: 0px 3px 106px -12px rgba(8,8,8,1);
+    box-shadow: 0px 3px 106px -12px rgba(8,8,8,1);
+}
