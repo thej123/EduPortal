@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
     {% load static %}
-    <link rel="stylesheet" type="text/css" href="static/eduPortal/css/dashboard2.css">
+    <link rel="stylesheet" type="text/css" href="/static/eduPortal/css/dashboard2.css">
     <title>Dashboard</title>
 </head>
 <body>
@@ -21,11 +21,23 @@
                 <tr><th>Student's Name</th></tr>
             </thead>
             <tbody>
-                <tr><td><div class="radio">
-                     <label><input type="radio" id='regular' name="optradio">TIKI</label>
-                 </div></td></tr>
+                <tr><td><input type="radio" name="optradio"> Student 1</td></tr>
             </tbody>
         </table>
+        <button type="submit">Connect with Student</button>
+    </div>
+
+    <div class="find-teacher">
+        <h3>Find a Teacher</h3>
+        <table class="table table-striped">
+            <thead>
+                <tr><th>Teacher's Name</th></tr>
+            </thead>
+            <tbody>
+                <tr><td><input type="radio" name="optradio"> Teacher 1</td></tr>
+            </tbody>
+        </table>
+        <button type="submit">Connect with Teacher</button>
     </div>
     
 </body>
