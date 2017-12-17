@@ -1,11 +1,15 @@
 * {
     font-family: 'Raleway', sans-serif;
+    padding: 8px;
 }
 
+
 .table {
-    width: 600px;
-}
+    /* width: 600px; */
+    border: 1px solid #e9ecef;
+} 
 
 .find-student, .find-teacher {
     margin: 20px auto;
+    width: 60%;
 }
