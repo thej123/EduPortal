@@ -2,10 +2,31 @@
     font-family: 'Raleway', sans-serif;
 }
 body {
-    background-image: url('../img/Education.jpg');
+    /* background-image: url('../img/Education.jpg');
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
+
+    /* background: url('../img/Education.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; */
+
+    /* background: url(images/bg.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; */
 }
+
+img {
+    background: url('../img/Education.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
 h1 {
     text-align: center;
     margin: 50px;
