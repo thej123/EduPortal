@@ -24,7 +24,7 @@ h2{
     margin-left: 70%;
 }
 
- a {
+a {
     margin-left: 10px;
 } 
 
@@ -32,7 +32,6 @@ button {
     margin-bottom: 20px;
 }
 .table {
-    /* width: 600px; */
     border: 1px solid #e9ecef;
 }
 

@@ -1,1 +1,73 @@
-hi
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="/static/eduPortal/css/studySession.css">
+    <title>Study Session</title>
+</head>
+<body>
+    <div class="all-content">
+        {% if request.session.role == 'teacher' %}
+        <div class="students-list">
+            <h2>Your Students</h2>
+            <table class="table table-striped">
+                <thead>
+                    <tr><th>Student's Name</th></tr>
+                </thead>
+                <tbody>
+                    {% for student in students %}
+                        <tr><td><input type="radio" name="optradio"> {{ student.name}}</td></tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        {% endif %}
+
+        {% if request.session.role == 'student' %}
+        <div class="teachers-list">
+            <h2>Your Teachers</h2>
+            <table class="table table-striped">
+                <thead>
+                    <tr><th>Teacher's Name</th></tr>
+                </thead>
+                <tbody>
+                    {% for teacher in teachers %}
+                        <tr><td><input type="radio" name="optradio"> {{ teacher.name}}</td></tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        {% endif %}
+
+        <div class="resources">
+            <h2>Subjects</h2>
+            <table class="table table-striped">
+                <thead>
+                    <tr><th>Subject Name</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Physics Level I</td></tr>
+                    <tr><td>Physics Level II</td></tr>
+                    <tr><td>Mathematics Level I</td></tr>
+                    <tr><td>Mathematics Level II</td></tr>
+                    <tr><td>Physics Level III</td></tr>
+                    <tr><td>Chemistry Level I</td></tr>
+                    <tr><td>Chemistry Level II</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="fundraiser">
+            <h2>Fundraisers</h2>
+            <img src="../static/eduPortal/img/fund1.jpg" alt="Fund 1" height="100px" width="300px">
+            <img src="../static/eduPortal/img/fund2.png" alt="Fund 2" height="100px" width="300px">
+            <img src="../static/eduPortal/img/fund3.png" alt="Fund 3" height="100px" width="300px">
+        </div>
+    </div>
+</body>
+</html>
