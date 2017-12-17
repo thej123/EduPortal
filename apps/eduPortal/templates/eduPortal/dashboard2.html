@@ -17,14 +17,12 @@
             <a href="/eduPortal/registerPage">My Profile</a>
             <a href="/eduPortal/logout">Log Out</a>
         </div>
-        
     </nav>
-    
-    
+     
     <div class="wrapper">
         {% if request.session.role == 'teacher' %}
         <div class="find-student">
-            <button>Connect with my Student</button>
+            <a href="/eduPortal/studySession"><button>HangOut with my Students</button></a>
             <h3>Find a Student</h3>
             <table class="table table-striped">
                 <thead>
@@ -41,7 +39,7 @@
         {% endif %}
         {% if request.session.role == 'student' %}
         <div class="find-teacher">
-            <button>Connect with my Teacher</button>
+            <a href="/eduPortal/studySession"><button>HangOut with my Teachers</button></a>
             <h3>Find a Teacher</h3>
             <table class="table table-striped">
                 <thead>

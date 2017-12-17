@@ -8,6 +8,7 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    width: 110%;
 }
 
 nav {
@@ -19,14 +20,35 @@ h2{
     display: inline-block;
 }
 
+.title {
+   
+    display: inline-block;
+    text-align:  center;
+    margin-left: 300px;
+}
+
 .page-urls {
     display: inline-block;
-    margin-left: 70%;
+    width: 100%;
+    /* margin-left: 70%; */
 }
 
  a {
-    margin-left: 10px;
+    display: inline-block;
+    /* margin-left: 200px; */
 } 
+
+button {
+    margin-bottom: 20px;
+}
+
+.link1 {
+     margin-left: 200px;
+}
+
+.link2 {
+    margin-left: 20px;
+}
 
 .table {
     /* width: 600px; */

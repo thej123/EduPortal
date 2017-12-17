@@ -57,6 +57,14 @@ def dashboardTwo(request):
     print "inside server, dashbaord two, topics", user.topics
     return render(request, "eduPortal/dashboard2.html", context)
 
+def studySession(request):
+    context = {
+        "students": User.objects.filter(role = "student"),
+        "teachers": User.objects.filter(role = "teacher")
+        }
+    user = User.objects.get(id=request.session['id'])
+    return render(request, "eduPortal/studySession.html", context)
+
 def register(request):
     print request.session['id'], request.session['name']
     user = User.objects.get(id=request.session['id'])

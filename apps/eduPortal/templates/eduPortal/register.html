@@ -8,11 +8,11 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">        
         {% load static %}
         <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="static/eduPortal/register.css">    
+        <link rel="stylesheet" type="text/css" href="/static/eduPortal/css/register.css">    
         <title>Register Page</title>
         </head>
     <body>
-
+        <div class="wrapper">
         {% if messages %}
         <div class="messages">
             {% for message in messages %}
@@ -20,18 +20,18 @@
             {% endfor %}
         </div>
         {% endif %}
+       
         <nav>
             <div class="page-urls">
-                <a href="/eduPortal/registerPage">My Profile</a>
-                <a href="/eduPortal/logout">Log Out</a>
+                <h1 class="title">My Profile</h1>
+                <a class="link1" href="/eduPortal/dashboardTwo">Dashboard</a>
+                <a  class="link2" href="/eduPortal/logout">Log Out</a>
             </div>
         </nav>
-        
-        <div>
             <form action="/eduPortal/registerSubmit" method="POST">
             {% csrf_token %}
             <div>
-            <h1>Level</h1>
+            <h2>Level  </h2>
             <select name="level" >
                 <option value="none">Select Level</option>
                 <option value="1">1</option>
@@ -42,24 +42,25 @@
             </select>               
             </div><br>
             <div>
-                <h1>Topics</h1>
+                <h2>Topics</h2><br>
                 <!-- <input type="checkbox" name="subject" value="all" checked>
                 <label>All</label> -->
+                <label>Math </label>
                 <input type="checkbox" name="subject" value="math">
-                <label>Math</label>
+                <label>Physics </label>
                 <input type="checkbox" name="subject" value="physics">
-                <label>Physics</label>
+                <label>Biology </label>
                 <input type="checkbox" name="subject" value="biology">
-                <label>Biology</label>
+                <label>Chemistry </label>
                 <input type="checkbox" name="subject" value="chemistry">
-                <label>Chemistry</label>
+                <label>English </label>
                 <input type="checkbox" name="subject" value="english">
-                <label>English</label>
-            </div>
+               
+            </div><br>
             <div>
-                <h1>Time</h1>
+                <h2>Time</h2>
                 <div>
-                    <table>
+                    <table class="table table-striped">
                         <thead>
                             <tr>
                                 <th>Weekday</th>
@@ -290,8 +291,6 @@
                             23<input type="checkbox" name="FridayTime" value="23">
                         </td> 
                     </tr>
-                            
-      
                     </table>
                 </div>
     
