@@ -1,26 +1,9 @@
 * {
     font-family: 'Raleway', sans-serif;
 }
+
 body {
-    /* background-image: url('../img/Education.jpg');
-    background-size: cover;
-    background-repeat: no-repeat; */
-
-    /* background: url('../img/Education.jpg') no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover; */
-
-    /* background: url(images/bg.jpg) no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover; */
-}
-
-img {
-    background: url('../img/Education.jpg') no-repeat center center fixed;
+    background: url('../img/background.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -30,12 +13,15 @@ img {
 h1 {
     text-align: center;
     margin: 50px;
+    font-weight: bold;
 }
+
 .log-reg {
     margin: 0 auto;
     text-align: center;
     width: 80%;
 }
+
 .inline {
     display: inline-block;
     vertical-align: top;
@@ -43,6 +29,7 @@ h1 {
     height: 300px;
     width: 300px;
 }
+
 input {
     margin: 5px;
 }
