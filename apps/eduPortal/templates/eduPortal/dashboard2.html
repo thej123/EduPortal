@@ -22,6 +22,7 @@
     
     
     <div class="wrapper">
+        {% if request.session.role == 'teacher' %}
         <div class="find-student">
             <button>Connect with my Student</button>
             <h3>Find a Student</h3>
@@ -30,14 +31,15 @@
                     <tr><th>Student's Name</th></tr>
                 </thead>
                 <tbody>
-                    {% for result in results %}
-                        <tr><td><input type="radio" name="optradio"> {{ result.name}}</td></tr>
+                    {% for student in students %}
+                        <tr><td><input type="radio" name="optradio"> {{ student.name}}</td></tr>
                     {% endfor %}
                 </tbody>
             </table>
             <button type="submit">Connect with Student</button>
         </div>
-
+        {% endif %}
+        {% if request.session.role == 'student' %}
         <div class="find-teacher">
             <button>Connect with my Teacher</button>
             <h3>Find a Teacher</h3>
@@ -46,13 +48,14 @@
                     <tr><th>Teacher's Name</th></tr>
                 </thead>
                 <tbody>
-                    {% for result in results %}
-                        <tr><td><input type="radio" name="optradio"> {{ result.name}}</td></tr>
+                    {% for teacher in teachers %}
+                        <tr><td><input type="radio" name="optradio"> {{ teacher.name}}</td></tr>
                     {% endfor %}
                 </tbody>
             </table>
             <button type="submit">Connect with Teacher</button>
         </div>
+        {% endif %}
     </div>
     
 </body>

@@ -14,10 +14,11 @@ def loginSubmit(request):
             messages.error(request, x)
         return redirect('/')
     else:
-        print 'login success', type(result.topics)
+        
         request.session['id'] = result.id
         request.session['name'] = result.name
         request.session['role'] = result.role
+        print 'login success', request.session['role'], result.role
         messages.success(request, 'You have logged in!')
         if not result.level:
             return redirect('/eduPortal/registerPage')
@@ -48,7 +49,7 @@ def dashboard(request):
 
 def dashboardTwo(request):
     context = {
-        "students": User.objects.filter(role = "students"),
+        "students": User.objects.filter(role = "student"),
         "teachers": User.objects.filter(role = "teacher")
         }
     user = User.objects.get(id=request.session['id'])
