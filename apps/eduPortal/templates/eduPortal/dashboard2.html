@@ -11,40 +11,48 @@
     <title>Dashboard</title>
 </head>
 <body>
-    <h2>Welcome name</h2>
-    <a href="/eduPortal/registerPage">My Profile</a>
-    <a href="/eduPortal/logout">Log Out</a>
+    <nav>
+        <h2>Welcome name</h2>
+        <div class="page-urls">
+            <a href="/eduPortal/registerPage">My Profile</a>
+            <a href="/eduPortal/logout">Log Out</a>
+        </div>
+        
+    </nav>
     
-    <div class="find-student">
-        <button>Connect with my Student</button>
-        <h3>Find a Student</h3>
-        <table class="table table-striped">
-            <thead>
-                <tr><th>Student's Name</th></tr>
-            </thead>
-            <tbody>
-                {% for result in results %}
-                    <tr><td><input type="radio" name="optradio"> {{ result.name}}</td></tr>
-                {% endfor %}
-            </tbody>
-        </table>
-        <button type="submit">Connect with Student</button>
-    </div>
+    
+    <div class="wrapper">
+        <div class="find-student">
+            <button>Connect with my Student</button>
+            <h3>Find a Student</h3>
+            <table class="table table-striped">
+                <thead>
+                    <tr><th>Student's Name</th></tr>
+                </thead>
+                <tbody>
+                    {% for result in results %}
+                        <tr><td><input type="radio" name="optradio"> {{ result.name}}</td></tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <button type="submit">Connect with Student</button>
+        </div>
 
-    <div class="find-teacher">
-        <button>Connect with my Teacher</button>
-        <h3>Find a Teacher</h3>
-        <table class="table table-striped">
-            <thead>
-                <tr><th>Teacher's Name</th></tr>
-            </thead>
-            <tbody>
-                {% for result in results %}
-                    <tr><td><input type="radio" name="optradio"> {{ result.name}}</td></tr>
-                {% endfor %}
-            </tbody>
-        </table>
-        <button type="submit">Connect with Teacher</button>
+        <div class="find-teacher">
+            <button>Connect with my Teacher</button>
+            <h3>Find a Teacher</h3>
+            <table class="table table-striped">
+                <thead>
+                    <tr><th>Teacher's Name</th></tr>
+                </thead>
+                <tbody>
+                    {% for result in results %}
+                        <tr><td><input type="radio" name="optradio"> {{ result.name}}</td></tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <button type="submit">Connect with Teacher</button>
+        </div>
     </div>
     
 </body>
