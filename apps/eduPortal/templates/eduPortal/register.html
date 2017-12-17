@@ -1,46 +1,158 @@
 
-
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Register Page</title>
-    </head>
-    <body>
-        {% if messages %}
-        <div class="messages">
-            {% for message in messages %}
-            <p>{{ message }}</p>
-            {% endfor %}
-        </div>
-        {% endif %}
-        <div>
-            <h1>Role</h1>
-            <input type="radio"
-                name="role" value="student">
-            <label>Student</label>
-        
-            <input type="radio"
-                name="role" value="teacher">
-            <label>Teacher</label>
-        </div>
-        <div>
-            <h1>Topics</h1>
-            <input type="checkbox" name="math" value="math">
-            <label>Math</label>
-            <input type="checkbox" name="physics" value="physics">
-            <label>Physics</label>
-            <input type="checkbox" name="biology" value="biology">
-            <label>Biology</label>
-            <input type="checkbox" name="chemistry" value="chemistry">
-            <label>Chemistry</label>
-            <input type="checkbox" name="english" value="english">
-            <label>English</label>
-        </div>
-        <div>
-            <h1>Time</h1>
-            <p><label></label><input type="date" name="startdate"></p>
-        </div>
-    </body>
-    </html>
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
+            {% load static %}
+            <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+            <link rel="stylesheet" type="text/css" href="static/eduPortal/register.css">    
+            <title>Register Page</title>
+        </head>
+        <body>
+            {% if messages %}
+            <div class="messages">
+                {% for message in messages %}
+                <p>{{ message }}</p>
+                {% endfor %}
+            </div>
+            {% endif %}
+            <form action="" method="POST">
+            {% csrf_token %}
+            <div>
+                <h1>Role</h1>
+                <input type="radio"
+                    name="role" value="student">
+                <label>Student</label>
+                <input type="radio"
+                    name="role" value="teacher">
+                <label>Teacher</label>
+            </div>
+            <div>
+                <h1>Topics</h1>
+                <input type="checkbox" name="math" value="math">
+                <label>Math</label>
+                <input type="checkbox" name="physics" value="physics">
+                <label>Physics</label>
+                <input type="checkbox" name="biology" value="biology">
+                <label>Biology</label>
+                <input type="checkbox" name="chemistry" value="chemistry">
+                <label>Chemistry</label>
+                <input type="checkbox" name="english" value="english">
+                <label>English</label>
+            </div>
+            <div>
+                <h1>Time</h1>
+                <div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Weekday</th>
+                                <th>Time</th>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="date" value="saturday">
+                                <label>Saturday </label> 
+                            </td>
+                            <td>
+                                    0<input type="checkbox" name="0" value="0">
+                                    1<input type="checkbox" name="time" value="1">
+                                    2<input type="checkbox" name="time" value="2">
+                                    3<input type="checkbox" name="time" value="3">
+                                    4<input type="checkbox" name="time" value="4">
+                                    5<input type="checkbox" name="time" value="5">
+                                    6<input type="checkbox" name="time" value="6">
+                                    7<input type="checkbox" name="time" value="7">
+                                    8<input type="checkbox" name="time" value="8">
+                                    9<input type="checkbox" name="time" value="9">
+                                    10<input type="checkbox" name="time" value="10">
+                                    11<input type="checkbox" name="time" value="11">
+                                    12<input type="checkbox" name="time" value="12">
+                                    13<input type="checkbox" name="time" value="13">
+                                    14<input type="checkbox" name="time" value="14">
+                                    15<input type="checkbox" name="time" value="15">
+                                    16<input type="checkbox" name="time" value="16">
+                                    17<input type="checkbox" name="time" value="17">
+                                    18<input type="checkbox" name="time" value="18">
+                                    19<input type="checkbox" name="time" value="19">
+                                    20<input type="checkbox" name="time" value="20">
+                                    21<input type="checkbox" name="time" value="21">
+                                    22<input type="checkbox" name="time" value="22">
+                                    23<input type="checkbox" name="time" value="23">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            <input type="checkbox" name="date" value="sunday ">
+                            <label>Sunday </label>
+                            </td>
+                            <td>
+                                    0<input type="checkbox" name="0" value="0">
+                                    1<input type="checkbox" name="time" value="1">
+                                    2<input type="checkbox" name="time" value="2">
+                                    3<input type="checkbox" name="time" value="3">
+                                    4<input type="checkbox" name="time" value="4">
+                                    5<input type="checkbox" name="time" value="5">
+                                    6<input type="checkbox" name="time" value="6">
+                                    7<input type="checkbox" name="time" value="7">
+                                    8<input type="checkbox" name="time" value="8">
+                                    9<input type="checkbox" name="time" value="9">
+                                    10<input type="checkbox" name="time" value="10">
+                                    11<input type="checkbox" name="time" value="11">
+                                    12<input type="checkbox" name="time" value="12">
+                                    13<input type="checkbox" name="time" value="13">
+                                    14<input type="checkbox" name="time" value="14">
+                                    15<input type="checkbox" name="time" value="15">
+                                    16<input type="checkbox" name="time" value="16">
+                                    17<input type="checkbox" name="time" value="17">
+                                    18<input type="checkbox" name="time" value="18">
+                                    19<input type="checkbox" name="time" value="19">
+                                    20<input type="checkbox" name="time" value="20">
+                                    21<input type="checkbox" name="time" value="21">
+                                    22<input type="checkbox" name="time" value="22">
+                                    23<input type="checkbox" name="time" value="23">
+                                </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            <input type="checkbox" name="date" value="monday">
+                            <label>Monday</label>
+                        </td>
+                        
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox" name="date" value="tuesday ">
+                            <label>Tuesday </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox" name="date" value="wednesday">
+                            <label>Wednesday</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox" name="date" value="thursday">
+                            <label>Thursday</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox" name="date" value="friday">
+                            <label>Friday</label>
+                        </td>
+                    </tr>
+                            
+      
+                    </table>
+                </div>
+    
+            </div>
+            <input type="submit" value="Submit">
+            </form>
+        </body>
+        </html>
