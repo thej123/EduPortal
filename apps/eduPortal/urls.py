@@ -11,4 +11,5 @@ urlpatterns = [
     url(r'^registerSubmit', views.registerSubmitInRegisterPage),
     url(r'^connect', views.connect),
     url(r'^findPartner', views.findPartner),
+    url(r'^logout', views.logout),
 ]

@@ -20,16 +20,27 @@
             <form action="/eduPortal/registerSubmit" method="POST">
             {% csrf_token %}
             <div>
+            <h1>Level</h1>
+            <select name="level" >
+                <option value="none">Select Level</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option> 
+            </select>               
+            </div><br>
+            <div>
                 <h1>Topics</h1>
-                <input type="checkbox" name="math" value="math">
+                <input type="checkbox" name="subject" value="math">
                 <label>Math</label>
-                <input type="checkbox" name="physics" value="physics">
+                <input type="checkbox" name="subject" value="physics">
                 <label>Physics</label>
-                <input type="checkbox" name="biology" value="biology">
+                <input type="checkbox" name="subject" value="biology">
                 <label>Biology</label>
-                <input type="checkbox" name="chemistry" value="chemistry">
+                <input type="checkbox" name="subject" value="chemistry">
                 <label>Chemistry</label>
-                <input type="checkbox" name="english" value="english">
+                <input type="checkbox" name="subject" value="english">
                 <label>English</label>
             </div>
             <div>
@@ -44,98 +55,227 @@
                         </thead>
                         <tr>
                             <td>
-                                <input type="checkbox" name="date" value="saturday">
+                                <!-- <input type="checkbox" name="date" value="saturday"> -->
                                 <label>Saturday </label> 
                             </td>
                             <td>
-                                    0<input type="checkbox" name="0" value="0">
-                                    1<input type="checkbox" name="time" value="1">
-                                    2<input type="checkbox" name="time" value="2">
-                                    3<input type="checkbox" name="time" value="3">
-                                    4<input type="checkbox" name="time" value="4">
-                                    5<input type="checkbox" name="time" value="5">
-                                    6<input type="checkbox" name="time" value="6">
-                                    7<input type="checkbox" name="time" value="7">
-                                    8<input type="checkbox" name="time" value="8">
-                                    9<input type="checkbox" name="time" value="9">
-                                    10<input type="checkbox" name="time" value="10">
-                                    11<input type="checkbox" name="time" value="11">
-                                    12<input type="checkbox" name="time" value="12">
-                                    13<input type="checkbox" name="time" value="13">
-                                    14<input type="checkbox" name="time" value="14">
-                                    15<input type="checkbox" name="time" value="15">
-                                    16<input type="checkbox" name="time" value="16">
-                                    17<input type="checkbox" name="time" value="17">
-                                    18<input type="checkbox" name="time" value="18">
-                                    19<input type="checkbox" name="time" value="19">
-                                    20<input type="checkbox" name="time" value="20">
-                                    21<input type="checkbox" name="time" value="21">
-                                    22<input type="checkbox" name="time" value="22">
-                                    23<input type="checkbox" name="time" value="23">
+                                    0<input type="checkbox" name="saturdayTime" value="0">
+                                    1<input type="checkbox" name="saturdayTime" value="1">
+                                    2<input type="checkbox" name="saturdayTime" value="2">
+                                    3<input type="checkbox" name="saturdayTime" value="3">
+                                    4<input type="checkbox" name="saturdayTime" value="4">
+                                    5<input type="checkbox" name="saturdayTime" value="5">
+                                    6<input type="checkbox" name="saturdayTime" value="6">
+                                    7<input type="checkbox" name="saturdayTime" value="7">
+                                    8<input type="checkbox" name="saturdayTime" value="8">
+                                    9<input type="checkbox" name="saturdayTime" value="9">
+                                    10<input type="checkbox" name="saturdayTime" value="10">
+                                    11<input type="checkbox" name="saturdayTime" value="11">
+                                    12<input type="checkbox" name="saturdayTime" value="12">
+                                    13<input type="checkbox" name="saturdayTime" value="13">
+                                    14<input type="checkbox" name="saturdayTime" value="14">
+                                    15<input type="checkbox" name="saturdayTime" value="15">
+                                    16<input type="checkbox" name="saturdayTime" value="16">
+                                    17<input type="checkbox" name="saturdayTime" value="17">
+                                    18<input type="checkbox" name="saturdayTime" value="18">
+                                    19<input type="checkbox" name="saturdayTime" value="19">
+                                    20<input type="checkbox" name="saturdayTime" value="20">
+                                    21<input type="checkbox" name="saturdayTime" value="21">
+                                    22<input type="checkbox" name="saturdayTime" value="22">
+                                    23<input type="checkbox" name="saturdayTime" value="23">
                             </td>
                         </tr>
                         <tr>
                             <td>
-                            <input type="checkbox" name="date" value="sunday ">
+                            <!-- <input type="checkbox" name="date" value="sunday "> -->
                             <label>Sunday </label>
                             </td>
                             <td>
-                                    0<input type="checkbox" name="0" value="0">
-                                    1<input type="checkbox" name="time" value="1">
-                                    2<input type="checkbox" name="time" value="2">
-                                    3<input type="checkbox" name="time" value="3">
-                                    4<input type="checkbox" name="time" value="4">
-                                    5<input type="checkbox" name="time" value="5">
-                                    6<input type="checkbox" name="time" value="6">
-                                    7<input type="checkbox" name="time" value="7">
-                                    8<input type="checkbox" name="time" value="8">
-                                    9<input type="checkbox" name="time" value="9">
-                                    10<input type="checkbox" name="time" value="10">
-                                    11<input type="checkbox" name="time" value="11">
-                                    12<input type="checkbox" name="time" value="12">
-                                    13<input type="checkbox" name="time" value="13">
-                                    14<input type="checkbox" name="time" value="14">
-                                    15<input type="checkbox" name="time" value="15">
-                                    16<input type="checkbox" name="time" value="16">
-                                    17<input type="checkbox" name="time" value="17">
-                                    18<input type="checkbox" name="time" value="18">
-                                    19<input type="checkbox" name="time" value="19">
-                                    20<input type="checkbox" name="time" value="20">
-                                    21<input type="checkbox" name="time" value="21">
-                                    22<input type="checkbox" name="time" value="22">
-                                    23<input type="checkbox" name="time" value="23">
+                                    0<input type="checkbox" name="sundayTime" value="0">
+                                    1<input type="checkbox" name="sundayTime" value="1">
+                                    2<input type="checkbox" name="sundayTime" value="2">
+                                    3<input type="checkbox" name="sundayTime" value="3">
+                                    4<input type="checkbox" name="sundayTime" value="4">
+                                    5<input type="checkbox" name="sundayTime" value="5">
+                                    6<input type="checkbox" name="sundayTime" value="6">
+                                    7<input type="checkbox" name="sundayTime" value="7">
+                                    8<input type="checkbox" name="sundayTime" value="8">
+                                    9<input type="checkbox" name="sundayTime" value="9">
+                                    10<input type="checkbox" name="sundayTime" value="10">
+                                    11<input type="checkbox" name="sundayTime" value="11">
+                                    12<input type="checkbox" name="sundayTime" value="12">
+                                    13<input type="checkbox" name="sundayTime" value="13">
+                                    14<input type="checkbox" name="sundayTime" value="14">
+                                    15<input type="checkbox" name="sundayTime" value="15">
+                                    16<input type="checkbox" name="sundayTime" value="16">
+                                    17<input type="checkbox" name="sundayTime" value="17">
+                                    18<input type="checkbox" name="sundayTime" value="18">
+                                    19<input type="checkbox" name="sundayTime" value="19">
+                                    20<input type="checkbox" name="sundayTime" value="20">
+                                    21<input type="checkbox" name="sundayTime" value="21">
+                                    22<input type="checkbox" name="sundayTime" value="22">
+                                    23<input type="checkbox" name="sundayTime" value="23">
                                 </td>
                         </tr>
                         <tr>
                             <td>
-                            <input type="checkbox" name="date" value="monday">
+                            <!-- <input type="checkbox" name="date" value="monday"> -->
                             <label>Monday</label>
                         </td>
-                        
+                        <td>
+                            0<input type="checkbox" name="MondayTime" value="0">
+                            1<input type="checkbox" name="MondayTime" value="1">
+                            2<input type="checkbox" name="MondayTime" value="2">
+                            3<input type="checkbox" name="MondayTime" value="3">
+                            4<input type="checkbox" name="MondayTime" value="4">
+                            5<input type="checkbox" name="MondayTime" value="5">
+                            6<input type="checkbox" name="MondayTime" value="6">
+                            7<input type="checkbox" name="MondayTime" value="7">
+                            8<input type="checkbox" name="MondayTime" value="8">
+                            9<input type="checkbox" name="MondayTime" value="9">
+                            10<input type="checkbox" name="MondayTime" value="10">
+                            11<input type="checkbox" name="MondayTime" value="11">
+                            12<input type="checkbox" name="MondayTime" value="12">
+                            13<input type="checkbox" name="MondayTime" value="13">
+                            14<input type="checkbox" name="MondayTime" value="14">
+                            15<input type="checkbox" name="MondayTime" value="15">
+                            16<input type="checkbox" name="MondayTime" value="16">
+                            17<input type="checkbox" name="MondayTime" value="17">
+                            18<input type="checkbox" name="MondayTime" value="18">
+                            19<input type="checkbox" name="MondayTime" value="19">
+                            20<input type="checkbox" name="MondayTime" value="20">
+                            21<input type="checkbox" name="MondayTime" value="21">
+                            22<input type="checkbox" name="MondayTime" value="22">
+                            23<input type="checkbox" name="MondayTime" value="23">
+                        </td>                        
                     </tr>
                     <tr>
                         <td>
-                            <input type="checkbox" name="date" value="tuesday ">
+                            <!-- <input type="checkbox" name="date" value="tuesday "> -->
                             <label>Tuesday </label>
                         </td>
+                        <td>
+                            0<input type="checkbox" name="TuesdayTime" value="0">
+                            1<input type="checkbox" name="TuesdayTime" value="1">
+                            2<input type="checkbox" name="TuesdayTime" value="2">
+                            3<input type="checkbox" name="TuesdayTime" value="3">
+                            4<input type="checkbox" name="TuesdayTime" value="4">
+                            5<input type="checkbox" name="TuesdayTime" value="5">
+                            6<input type="checkbox" name="TuesdayTime" value="6">
+                            7<input type="checkbox" name="TuesdayTime" value="7">
+                            8<input type="checkbox" name="TuesdayTime" value="8">
+                            9<input type="checkbox" name="TuesdayTime" value="9">
+                            10<input type="checkbox" name="TuesdayTime" value="10">
+                            11<input type="checkbox" name="TuesdayTime" value="11">
+                            12<input type="checkbox" name="TuesdayTime" value="12">
+                            13<input type="checkbox" name="TuesdayTime" value="13">
+                            14<input type="checkbox" name="TuesdayTime" value="14">
+                            15<input type="checkbox" name="TuesdayTime" value="15">
+                            16<input type="checkbox" name="TuesdayTime" value="16">
+                            17<input type="checkbox" name="MondayTime" value="17">
+                            18<input type="checkbox" name="TuesdayTime" value="18">
+                            19<input type="checkbox" name="TuesdayTime" value="19">
+                            20<input type="checkbox" name="TuesdayTime" value="20">
+                            21<input type="checkbox" name="TuesdayTime" value="21">
+                            22<input type="checkbox" name="TuesdayTime" value="22">
+                            23<input type="checkbox" name="TuesdayTime" value="23">
+                        </td> 
                     </tr>
                     <tr>
                         <td>
-                            <input type="checkbox" name="date" value="wednesday">
+                            <!-- <input type="checkbox" name="date" value="wednesday"> -->
                             <label>Wednesday</label>
                         </td>
+                        <td>
+                            0<input type="checkbox" name="WednesdayTime" value="0">
+                            1<input type="checkbox" name="WednesdayTime" value="1">
+                            2<input type="checkbox" name="WednesdayTime" value="2">
+                            3<input type="checkbox" name="WednesdayTime" value="3">
+                            4<input type="checkbox" name="WednesdayTime" value="4">
+                            5<input type="checkbox" name="WednesdayTime" value="5">
+                            6<input type="checkbox" name="WednesdayTime" value="6">
+                            7<input type="checkbox" name="WednesdayTime" value="7">
+                            8<input type="checkbox" name="WednesdayTime" value="8">
+                            9<input type="checkbox" name="WednesdayTime" value="9">
+                            10<input type="checkbox" name="WednesdayTime" value="10">
+                            11<input type="checkbox" name="WednesdayTime" value="11">
+                            12<input type="checkbox" name="WednesdayTime" value="12">
+                            13<input type="checkbox" name="WednesdayTime" value="13">
+                            14<input type="checkbox" name="WednesdayTime" value="14">
+                            15<input type="checkbox" name="WednesdayTime" value="15">
+                            16<input type="checkbox" name="WednesdayTime" value="16">
+                            17<input type="checkbox" name="WednesdayTime" value="17">
+                            18<input type="checkbox" name="WednesdayTime" value="18">
+                            19<input type="checkbox" name="WednesdayTime" value="19">
+                            20<input type="checkbox" name="WednesdayTime" value="20">
+                            21<input type="checkbox" name="WednesdayTime" value="21">
+                            22<input type="checkbox" name="WednesdayTime" value="22">
+                            23<input type="checkbox" name="WednesdayTime" value="23">
+                        </td> 
                     </tr>
                     <tr>
                         <td>
-                            <input type="checkbox" name="date" value="thursday">
+                            <!-- <input type="checkbox" name="date" value="thursday"> -->
                             <label>Thursday</label>
                         </td>
+                        <td>
+                            0<input type="checkbox" name="ThursdayTime" value="0">
+                            1<input type="checkbox" name="ThursdayTime" value="1">
+                            2<input type="checkbox" name="ThursdayTime" value="2">
+                            3<input type="checkbox" name="ThursdayTime" value="3">
+                            4<input type="checkbox" name="ThursdayTime" value="4">
+                            5<input type="checkbox" name="ThursdayTime" value="5">
+                            6<input type="checkbox" name="ThursdayTime" value="6">
+                            7<input type="checkbox" name="ThursdayTime" value="7">
+                            8<input type="checkbox" name="ThursdayTime" value="8">
+                            9<input type="checkbox" name="ThursdayTime" value="9">
+                            10<input type="checkbox" name="ThursdayTime" value="10">
+                            11<input type="checkbox" name="ThursdayTime" value="11">
+                            12<input type="checkbox" name="ThursdayTime" value="12">
+                            13<input type="checkbox" name="ThursdayTime" value="13">
+                            14<input type="checkbox" name="ThursdayTime" value="14">
+                            15<input type="checkbox" name="ThursdayTime" value="15">
+                            16<input type="checkbox" name="ThursdayTime" value="16">
+                            17<input type="checkbox" name="ThursdayTime" value="17">
+                            18<input type="checkbox" name="ThursdayTime" value="18">
+                            19<input type="checkbox" name="ThursdayTime" value="19">
+                            20<input type="checkbox" name="ThursdayTime" value="20">
+                            21<input type="checkbox" name="ThursdayTime" value="21">
+                            22<input type="checkbox" name="ThursdayTime" value="22">
+                            23<input type="checkbox" name="ThursdayTime" value="23">
+                        </td> 
                     </tr>
                     <tr>
                         <td>
-                            <input type="checkbox" name="date" value="friday">
+                            <!-- <input type="checkbox" name="date" value="friday"> -->
                             <label>Friday</label>
                         </td>
+                        <td>
+                            0<input type="checkbox" name="FridayTime" value="0">
+                            1<input type="checkbox" name="FridayTime" value="1">
+                            2<input type="checkbox" name="FridayTime" value="2">
+                            3<input type="checkbox" name="FridayTime" value="3">
+                            4<input type="checkbox" name="FridayTime" value="4">
+                            5<input type="checkbox" name="FridayTime" value="5">
+                            6<input type="checkbox" name="FridayTime" value="6">
+                            7<input type="checkbox" name="FridayTime" value="7">
+                            8<input type="checkbox" name="FridayTime" value="8">
+                            9<input type="checkbox" name="FridayTime" value="9">
+                            10<input type="checkbox" name="FridayTime" value="10">
+                            11<input type="checkbox" name="FridayTime" value="11">
+                            12<input type="checkbox" name="FridayTime" value="12">
+                            13<input type="checkbox" name="FridayTime" value="13">
+                            14<input type="checkbox" name="FridayTime" value="14">
+                            15<input type="checkbox" name="FridayTime" value="15">
+                            16<input type="checkbox" name="FridayTime" value="16">
+                            17<input type="checkbox" name="FridayTime" value="17">
+                            18<input type="checkbox" name="FridayTime" value="18">
+                            19<input type="checkbox" name="FridayTime" value="19">
+                            20<input type="checkbox" name="FridayTime" value="20">
+                            21<input type="checkbox" name="FridayTime" value="21">
+                            22<input type="checkbox" name="FridayTime" value="22">
+                            23<input type="checkbox" name="FridayTime" value="23">
+                        </td> 
                     </tr>
                             
       
